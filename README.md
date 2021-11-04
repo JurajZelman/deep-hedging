@@ -1,1 +1,2 @@
-# deep-hedging
+# Deep Hedging
+This project will, first, aim to replicate the Deep Hedging Algorithm, as first proposed by Buehler et al. (2019). The paper will be extended to include ecevution risk - the risk that large trades will be executed at unfavourable positions. The scalability of the project will then be researched.
