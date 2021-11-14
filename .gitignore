@@ -1,2 +1,19 @@
+### macOS ###
+# General
+.DS_Store
+
+# VSCode
+.vscode
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
 *.ipynb_checkpoints
 
+# Pipenv
+Pipfile
+Pipfile.lock
