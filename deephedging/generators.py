@@ -1,3 +1,5 @@
+"""A module that contains generators of stochastic processes."""
+
 from abc import ABC, abstractmethod
 from typing import Iterator
 
@@ -6,18 +8,21 @@ import torch
 
 
 class PathGenerator(ABC):
-    """Abstract base class for path generators."""
+    """Abstract base class for generators of stochastic process paths."""
 
     @abstractmethod
     def __init__(self) -> None:
+        """Initializes the path generator."""
         pass
 
     @abstractmethod
     def __iter__(self) -> Iterator:
+        """Returns the path generator as an iterator."""
         pass
 
     @abstractmethod
     def __next__(self) -> torch.Tensor:
+        """Generates the next batch of paths."""
         pass
 
 
