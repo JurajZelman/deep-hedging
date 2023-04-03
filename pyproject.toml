@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "deephedging"
+version = "0.1.0"
+description = "Deep hedging."
+authors = ["Jonathan Baker <>",
+            "Juraj Zelman <zelman.juraj@gmail.com>"]
+packages = [{include = "deephedging"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+numpy = "^1.24.2"
+torch = "^2.0.0"
+scipy = "^1.10.1"
+matplotlib = "^3.7.1"
+seaborn = "^0.12.2"
+tqdm = "^4.65.0"
+ipykernel = "^6.22.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.0.4"
+mypy = "^1.0.0"
+pandas-stubs = "^1.5.3.230203"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 80
+safe = true
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+line_length = 80
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover"]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B311"]
