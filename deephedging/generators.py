@@ -90,6 +90,7 @@ class BlackScholesGenerator(PathGenerator):
         logS = np.cumsum(logS, axis=0)
 
         paths = self.S0 * np.exp(logS).T
+        # return torch.from_numpy(paths).type(torch.float32).to(self.device)
         return torch.from_numpy(paths).type(torch.float32).to(self.device)
 
 

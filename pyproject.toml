@@ -2,7 +2,7 @@
 name = "deephedging"
 version = "0.1.0"
 description = "Deep hedging."
-authors = ["Jonathan Baker <>",
+authors = ["Jonathan Baker",
             "Juraj Zelman <zelman.juraj@gmail.com>"]
 packages = [{include = "deephedging"}]
 
